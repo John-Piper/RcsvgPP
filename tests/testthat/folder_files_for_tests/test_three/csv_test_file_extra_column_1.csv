@@ -1,0 +1,8 @@
+﻿Day,Avg_Temp,Min_Temp,Max_Temp,Extra_Column
+Monday,12,11,14,Only add to dataframe if columns the same
+Tuesday,17,14,20,Only add to dataframe if columns the same
+Wednesday,12,11,15,Only add to dataframe if columns the same
+Thursday,12,9,13,Only add to dataframe if columns the same
+Friday,20,17,21,Only add to dataframe if columns the same
+Saturday,14,11,17,Only add to dataframe if columns the same
+Sunday,19,17,20,Only add to dataframe if columns the same
