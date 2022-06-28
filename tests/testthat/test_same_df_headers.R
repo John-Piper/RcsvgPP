@@ -37,7 +37,7 @@ test_df_only_one_column <- data.frame(first_column = column_values_one)
 
 test_that("Both dataframes with the same column names return TRUE", {
 
-  expect_equal(same_df_headers(main_test_df, test_df_same_col_names),
+  expect_equal(sameHeaders(main_test_df, test_df_same_col_names),
                TRUE)
 
 })
@@ -45,28 +45,28 @@ test_that("Both dataframes with the same column names return TRUE", {
 
 test_that("Function returns FALSE when both dataframes have different column names", {
 
-  expect_false(same_df_headers(main_test_df, test_df_different_col_names))
+  expect_false(sameHeaders(main_test_df, test_df_different_col_names))
 
 })
 
 
 test_that("Function returns FALSE when right dataframes have at least one different column name", {
 
-  expect_false(same_df_headers(main_test_df, test_df_different_second_col_name))
+  expect_false(sameHeaders(main_test_df, test_df_different_second_col_name))
 
 })
 
 
 test_that("Function returns FALSE when both dataframes have the same col names but in a different order", {
 
-  expect_false(same_df_headers(main_test_df, test_df_same_col_names_different_order))
+  expect_false(sameHeaders(main_test_df, test_df_same_col_names_different_order))
 
 })
 
 
 test_that("Function returns FALSE when both dataframes have different column lengths", {
 
-  expect_false(same_df_headers(main_test_df, test_df_only_one_column))
+  expect_false(sameHeaders(main_test_df, test_df_only_one_column))
 
 })
 

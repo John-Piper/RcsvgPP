@@ -33,7 +33,7 @@ df_headers_ok <- function(left_df, right_df, check_header_names = TRUE) {
 
     if (check_header_names) {
 
-      if (!same_df_headers(left_df, right_df)) {
+      if (!sameHeaders(left_df, right_df)) {
 
         return_value <- FALSE
 
