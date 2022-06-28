@@ -1,3 +1,5 @@
 export(glue_data)
 export(glue_from_folder)
 importFrom("utils", "read.csv")
+useDynLib("RcsvgPP")
+importFrom(Rcpp,evalCpp)
