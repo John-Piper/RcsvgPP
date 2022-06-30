@@ -36,7 +36,7 @@ glue_data <- function(input_data, check_header_names = TRUE) {
 
     current_df <- input_data[[iteration]]
 
-    if (df_headers_ok(first_df, current_df, check_header_names)) {
+    if (DataFrameHeadersCheck(first_df, current_df, check_header_names)) {
 
       index <- length(df_list) + 1
 

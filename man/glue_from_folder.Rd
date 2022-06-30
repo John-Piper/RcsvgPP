@@ -18,11 +18,11 @@ glue_from_folder(
 
 \item{pattern}{character.  Regex pattern used in list.files.}
 
-\item{check_header_names}{logical. True to Check the files are the same by column names or False for number of columns}
+\item{check_header_names}{logical. True to Check the files are the same by column names or False for number of columns.}
 
-\item{first_file}{character vector. Choose the file name that all the other files check for the same column names or number of columns}
+\item{first_file}{character vector. Choose the file name that all the other files check for the same column names or number of columns.}
 
-\item{func}{function. The function to use to open the files from the folder.  Default is csv.read.  User could use external packages to open files}
+\item{func}{function. The function to use to open the files from the folder.  Default is csv.read.  User could use external packages to open files.}
 
 \item{...}{Extra arguments. Can be added that will be passed into the func param.}
 }
