@@ -9,7 +9,3 @@ moveToIndexOne <- function(x, chrVector) {
     .Call('_RcsvgPP_moveToIndexOne', PACKAGE = 'RcsvgPP', x, chrVector)
 }
 
-sameHeaders <- function(leftDataFrame, rightDataFrame) {
-    .Call('_RcsvgPP_sameHeaders', PACKAGE = 'RcsvgPP', leftDataFrame, rightDataFrame)
-}
-

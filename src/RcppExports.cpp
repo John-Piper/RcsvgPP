@@ -35,23 +35,10 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// sameHeaders
-bool sameHeaders(DataFrame leftDataFrame, DataFrame rightDataFrame);
-RcppExport SEXP _RcsvgPP_sameHeaders(SEXP leftDataFrameSEXP, SEXP rightDataFrameSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< DataFrame >::type leftDataFrame(leftDataFrameSEXP);
-    Rcpp::traits::input_parameter< DataFrame >::type rightDataFrame(rightDataFrameSEXP);
-    rcpp_result_gen = Rcpp::wrap(sameHeaders(leftDataFrame, rightDataFrame));
-    return rcpp_result_gen;
-END_RCPP
-}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_RcsvgPP_DataFrameHeadersCheck", (DL_FUNC) &_RcsvgPP_DataFrameHeadersCheck, 3},
     {"_RcsvgPP_moveToIndexOne", (DL_FUNC) &_RcsvgPP_moveToIndexOne, 2},
-    {"_RcsvgPP_sameHeaders", (DL_FUNC) &_RcsvgPP_sameHeaders, 2},
     {NULL, NULL, 0}
 };
 
