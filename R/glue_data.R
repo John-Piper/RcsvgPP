@@ -18,7 +18,6 @@
 #'
 #' final_df_two <- glue_data(df_list, check_header_names = FALSE)
 #'
-#'
 #' }
 glue_data <- function(input_data, check_header_names = TRUE) {
 

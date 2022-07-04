@@ -28,6 +28,5 @@ final_df_one <- glue_data(df_list)
 
 final_df_two <- glue_data(df_list, check_header_names = FALSE)
 
-
 }
 }
