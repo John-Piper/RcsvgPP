@@ -2,6 +2,7 @@
 using namespace Rcpp;
 
 
+// [[Rcpp::export]]
 bool sameHeaders(const DataFrame &leftDataFrame, const DataFrame &rightDataFrame) {
 
   CharacterVector leftDFNames = leftDataFrame.names();
@@ -39,7 +40,7 @@ bool sameHeaders(const DataFrame &leftDataFrame, const DataFrame &rightDataFrame
 
 
 // [[Rcpp::export]]
-bool DataFrameHeadersCheck(const DataFrame &leftDataFrame, const DataFrame &rightDataFrame, bool checkHeaderNames) {
+bool dataFrameHeadersCheck(const DataFrame &leftDataFrame, const DataFrame &rightDataFrame, bool checkHeaderNames) {
 
   if (checkHeaderNames) {
 
@@ -51,7 +52,7 @@ bool DataFrameHeadersCheck(const DataFrame &leftDataFrame, const DataFrame &righ
 
   }
 
-  if (leftDataFrame.ncol() == rightDataFrame.ncol()) {
+  if (leftDataFrame.ncol() != rightDataFrame.ncol()) {
 
      return false;
 

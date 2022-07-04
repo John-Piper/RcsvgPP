@@ -25,7 +25,7 @@ test_right_df_two <- data.frame(first_column = column_values_one,
 test_that("Returns True when two dataframes passed in the function have the same header names", {
 
   expect_equal(
-    df_headers_ok(test_left_df_one, test_right_df_one),
+    dataFrameHeadersCheck(test_left_df_one, test_right_df_one, checkHeaderNames = TRUE),
     TRUE
   )
 
@@ -35,7 +35,7 @@ test_that("Returns True when two dataframes passed in the function have the same
 test_that("Returns False when two dataframes passed in the function do not have the same header names", {
 
   expect_equal(
-    df_headers_ok(test_left_df_two, test_right_df_one),
+    dataFrameHeadersCheck(test_left_df_two, test_right_df_one, checkHeaderNames = TRUE),
     FALSE
   )
 
@@ -45,17 +45,17 @@ test_that("Returns False when two dataframes passed in the function do not have 
 test_that("Return True when two dataframes passed in the function have the same number of columns and headers are not being checked", {
 
   expect_equal(
-    df_headers_ok(test_left_df_two, test_right_df_one, check_header_names = FALSE),
+    dataFrameHeadersCheck(test_left_df_two, test_right_df_one, checkHeaderNames = FALSE),
     TRUE
   )
 
 })
 
 
-test_that("Return FALSE when two dataframes passed in the function do not have tge same number of columns and headers are not being checked", {
+test_that("Return FALSE when two dataframes passed in the function do not have the same number of columns and headers are not being checked", {
 
   expect_equal(
-    df_headers_ok(test_left_df_two, test_right_df_two, check_header_names = FALSE),
+    dataFrameHeadersCheck(test_left_df_two, test_right_df_two, checkHeaderNames = FALSE),
     FALSE
   )
 

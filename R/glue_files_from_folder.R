@@ -39,7 +39,7 @@ glue_from_folder <- function(folder_path = "",
 
   if (!is.na(first_file)) {
 
-    file_names <- move_to_index_one(first_file, file_names)
+    file_names <- moveToIndexOne(first_file, file_names)
 
   }
 
