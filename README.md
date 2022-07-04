@@ -24,8 +24,8 @@ frame. The main function performs a union all join to glue data
 together. RcsvPP is an additional version to Rcsvg
 <https://github.com/John-Piper/Rcsvg>. RcsvPP has converted some of the
 original functions from Rcsvg into c++ using the Rcpp package. The
-package is more robust and quicker to glue R dataframes in lists or csv
-files from folders.
+package is more robust and quicker to glue R dataframes from a list or
+csv files from a folder.
 
 ## Installation
 
