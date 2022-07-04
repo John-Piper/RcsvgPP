@@ -4,6 +4,12 @@
 # RcsvgPP <img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/John-Piper/RcsvgPP/workflows/R-CMD-check/badge.svg)](https://github.com/John-Piper/RcsvgPP/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/John-Piper/RcsvgPP/branch/main/graph/badge.svg)](https://app.codecov.io/gh/John-Piper/RcsvgPP?branch=main)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/RcsvgPP)](https://CRAN.R-project.org/package=RcsvgPP)
 <!-- badges: end -->
 
 The goal of RcsvgPP (R CSV Glue) is to make the job easier to glue
@@ -15,7 +21,11 @@ read data from the folder destination. It is not limited to just CSV
 files if you use an external package. The user can also use the
 glue_data function to join multiple data frames in a list into one data
 frame. The main function performs a union all join to glue data
-together.
+together. RcsvPP is an additional version to Rcsvg
+<https://github.com/John-Piper/Rcsvg>. RcsvPP has converted some of the
+original functions from Rcsvg into c++ using the Rcpp package. The
+package is more robust and quicker to glue R dataframes in lists or csv
+files from folders.
 
 ## Installation
 
