@@ -59,12 +59,24 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// setDataframeColNamesToFirstDataframe
+std::vector<DataFrame> setDataframeColNamesToFirstDataframe(std::vector<DataFrame>& dataframeVector);
+RcppExport SEXP _RcsvgPP_setDataframeColNamesToFirstDataframe(SEXP dataframeVectorSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<DataFrame>& >::type dataframeVector(dataframeVectorSEXP);
+    rcpp_result_gen = Rcpp::wrap(setDataframeColNamesToFirstDataframe(dataframeVector));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_RcsvgPP_sameHeaders", (DL_FUNC) &_RcsvgPP_sameHeaders, 2},
     {"_RcsvgPP_dataFrameHeadersCheck", (DL_FUNC) &_RcsvgPP_dataFrameHeadersCheck, 3},
     {"_RcsvgPP_keepDataframesWithSameHeaders", (DL_FUNC) &_RcsvgPP_keepDataframesWithSameHeaders, 2},
     {"_RcsvgPP_moveToIndexOne", (DL_FUNC) &_RcsvgPP_moveToIndexOne, 2},
+    {"_RcsvgPP_setDataframeColNamesToFirstDataframe", (DL_FUNC) &_RcsvgPP_setDataframeColNamesToFirstDataframe, 1},
     {NULL, NULL, 0}
 };
 

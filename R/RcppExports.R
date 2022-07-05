@@ -17,3 +17,7 @@ moveToIndexOne <- function(x, chrVector) {
     .Call('_RcsvgPP_moveToIndexOne', PACKAGE = 'RcsvgPP', x, chrVector)
 }
 
+setDataframeColNamesToFirstDataframe <- function(dataframeVector) {
+    .Call('_RcsvgPP_setDataframeColNamesToFirstDataframe', PACKAGE = 'RcsvgPP', dataframeVector)
+}
+

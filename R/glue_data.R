@@ -24,7 +24,7 @@ glue_data <- function(input_data, check_header_names = TRUE) {
 
   df_list <- keepDataframesWithSameHeaders(input_data, check_header_names)
 
-  df_list <- set_df_colnames(df_list, names(df_list[[1]]))
+  df_list <- setDataframeColNamesToFirstDataframe(df_list)
 
   merged_df <- merge_all_dfs(df_list)
 
