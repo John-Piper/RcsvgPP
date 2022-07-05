@@ -35,6 +35,18 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// keepDataframesWithSameHeaders
+std::vector<DataFrame> keepDataframesWithSameHeaders(std::vector<DataFrame>& dataframeVector, bool checkHeaderNames);
+RcppExport SEXP _RcsvgPP_keepDataframesWithSameHeaders(SEXP dataframeVectorSEXP, SEXP checkHeaderNamesSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<DataFrame>& >::type dataframeVector(dataframeVectorSEXP);
+    Rcpp::traits::input_parameter< bool >::type checkHeaderNames(checkHeaderNamesSEXP);
+    rcpp_result_gen = Rcpp::wrap(keepDataframesWithSameHeaders(dataframeVector, checkHeaderNames));
+    return rcpp_result_gen;
+END_RCPP
+}
 // moveToIndexOne
 CharacterVector moveToIndexOne(String x, CharacterVector& chrVector);
 RcppExport SEXP _RcsvgPP_moveToIndexOne(SEXP xSEXP, SEXP chrVectorSEXP) {
@@ -51,6 +63,7 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_RcsvgPP_sameHeaders", (DL_FUNC) &_RcsvgPP_sameHeaders, 2},
     {"_RcsvgPP_dataFrameHeadersCheck", (DL_FUNC) &_RcsvgPP_dataFrameHeadersCheck, 3},
+    {"_RcsvgPP_keepDataframesWithSameHeaders", (DL_FUNC) &_RcsvgPP_keepDataframesWithSameHeaders, 2},
     {"_RcsvgPP_moveToIndexOne", (DL_FUNC) &_RcsvgPP_moveToIndexOne, 2},
     {NULL, NULL, 0}
 };

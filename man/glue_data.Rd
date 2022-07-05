@@ -23,7 +23,6 @@ Glues a list of data.frames into one data.frame if the they have the same header
 
 df_list <- List(df_1, df_2, df_3)
 
-
 final_df_one <- glue_data(df_list)
 
 final_df_two <- glue_data(df_list, check_header_names = FALSE)

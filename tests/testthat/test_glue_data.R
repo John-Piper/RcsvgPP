@@ -42,6 +42,9 @@ test_df_six <- data.frame(a_column = column_values_two,
 
 df_test_list_two <- list(test_df_one, test_df_two, test_df_five, test_df_six)
 
+expected_outcome_test_two <- data.frame(first_column = c(column_values_one, column_values_three, column_values_one, column_values_two),
+                                        second_column = c(column_values_two, column_values_four, column_values_three, column_values_four))
+
 
 # Setup for test three - Three df with columns the same and one df with different amount of columns
 
@@ -52,6 +55,9 @@ test_df_seven <- data.frame(column_a = column_values_one,
 
 
 df_test_list_three <- list(test_df_one, test_df_two, test_df_seven, test_df_three, test_df_four)
+
+expected_outcome_test_three <- data.frame(first_column = c(column_values_one, column_values_three, column_values_one, column_values_two),
+                                          second_column = c(column_values_two, column_values_four, column_values_three, column_values_four))
 
 
 #------------------------------------------------------------------------------------------------------------------------------------------#
@@ -71,7 +77,7 @@ test_that("Four dataframes in a list with the same column names merge into a new
 test_that("Four dataframes in a list with two with the same column names and two with different column names merge into a new data frame keeping all values", {
 
   expect_equal(glue_data(df_test_list_two, check_header_names = FALSE),
-               expected_outcome_test_one)
+               expected_outcome_test_two)
 
 })
 
@@ -79,7 +85,7 @@ test_that("Four dataframes in a list with two with the same column names and two
 test_that("One data frame that that has a different amount of columns which is not first in the list is not included in the merge - checking headers names", {
 
   expect_equal(glue_data(df_test_list_three),
-               expected_outcome_test_one)
+               expected_outcome_test_three)
 
 })
 

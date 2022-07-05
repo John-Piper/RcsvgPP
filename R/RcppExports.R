@@ -9,6 +9,10 @@ dataFrameHeadersCheck <- function(leftDataFrame, rightDataFrame, checkHeaderName
     .Call('_RcsvgPP_dataFrameHeadersCheck', PACKAGE = 'RcsvgPP', leftDataFrame, rightDataFrame, checkHeaderNames)
 }
 
+keepDataframesWithSameHeaders <- function(dataframeVector, checkHeaderNames) {
+    .Call('_RcsvgPP_keepDataframesWithSameHeaders', PACKAGE = 'RcsvgPP', dataframeVector, checkHeaderNames)
+}
+
 moveToIndexOne <- function(x, chrVector) {
     .Call('_RcsvgPP_moveToIndexOne', PACKAGE = 'RcsvgPP', x, chrVector)
 }

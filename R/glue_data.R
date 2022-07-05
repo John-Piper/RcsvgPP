@@ -13,7 +13,6 @@
 #'
 #' df_list <- List(df_1, df_2, df_3)
 #'
-#'
 #' final_df_one <- glue_data(df_list)
 #'
 #' final_df_two <- glue_data(df_list, check_header_names = FALSE)
@@ -23,31 +22,9 @@ glue_data <- function(input_data, check_header_names = TRUE) {
 
   stopifnot(length(input_data) > 0, is.data.frame(input_data[[1]]))
 
-  first_df <- input_data[[1]]
+  df_list <- keepDataframesWithSameHeaders(input_data, check_header_names)
 
-  df_list <- list(first_df)
-
-  iteration <- 2
-
-  input_data_length <- length(input_data)
-
-  while(iteration <= input_data_length) {
-
-    current_df <- input_data[[iteration]]
-
-    if (dataFrameHeadersCheck(first_df, current_df, check_header_names)) {
-
-      index <- length(df_list) + 1
-
-      df_list[[index]] <- current_df
-
-    }
-
-    iteration <- iteration + 1
-
-  }
-
-  df_list <- set_df_colnames(df_list, names(first_df))
+  df_list <- set_df_colnames(df_list, names(df_list[[1]]))
 
   merged_df <- merge_all_dfs(df_list)
 
