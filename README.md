@@ -6,8 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/John-Piper/RcsvgPP/workflows/R-CMD-check/badge.svg)](https://github.com/John-Piper/RcsvgPP/actions)
-[![Codecov test
-coverage](https://codecov.io/gh/John-Piper/RcsvgPP/branch/main/graph/badge.svg)](https://app.codecov.io/gh/John-Piper/RcsvgPP?branch=main)
+[![codecov](https://codecov.io/gh/John-Piper/RcsvgPP/branch/main/graph/badge.svg?token=ZLHV0ZY2X2)](https://codecov.io/gh/John-Piper/RcsvgPP)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/RcsvgPP)](https://CRAN.R-project.org/package=RcsvgPP)
 <!-- badges: end -->
