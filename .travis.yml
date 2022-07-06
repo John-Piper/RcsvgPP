@@ -13,3 +13,6 @@ r_github_packages:
 
 after_success:
   - Rscript -e 'library(covr);codecov()'
+
+codecov:
+  token: 08828d9d-437d-4e56-a0d1-50fd8a886dcb
