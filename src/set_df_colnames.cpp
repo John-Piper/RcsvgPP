@@ -2,6 +2,10 @@
 using namespace Rcpp;
 
 
+//' Sets all the data frames in a vector to have the same headers as the first data frame in the vector.
+//'
+//' @param dataframeVector vector of data frames.
+//' @return Vector of data frames with all the column names the same as the first data frame.
 // [[Rcpp::export]]
 std::vector<DataFrame> setDataframeColNamesToFirstDataframe(std::vector<DataFrame> &dataframeVector) {
 

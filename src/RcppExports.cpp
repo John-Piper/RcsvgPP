@@ -35,6 +35,29 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// indexOfDiffDataframeInVector
+void indexOfDiffDataframeInVector(std::vector<int>& indexOfDataframesToRemove, std::vector<DataFrame>& dataframeVector, bool const& checkHeaderNames);
+RcppExport SEXP _RcsvgPP_indexOfDiffDataframeInVector(SEXP indexOfDataframesToRemoveSEXP, SEXP dataframeVectorSEXP, SEXP checkHeaderNamesSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<int>& >::type indexOfDataframesToRemove(indexOfDataframesToRemoveSEXP);
+    Rcpp::traits::input_parameter< std::vector<DataFrame>& >::type dataframeVector(dataframeVectorSEXP);
+    Rcpp::traits::input_parameter< bool const& >::type checkHeaderNames(checkHeaderNamesSEXP);
+    indexOfDiffDataframeInVector(indexOfDataframesToRemove, dataframeVector, checkHeaderNames);
+    return R_NilValue;
+END_RCPP
+}
+// removeDifferentDataframes
+void removeDifferentDataframes(std::vector<int>& indexOfDataframesToRemove, std::vector<DataFrame>& dataframeVector);
+RcppExport SEXP _RcsvgPP_removeDifferentDataframes(SEXP indexOfDataframesToRemoveSEXP, SEXP dataframeVectorSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<int>& >::type indexOfDataframesToRemove(indexOfDataframesToRemoveSEXP);
+    Rcpp::traits::input_parameter< std::vector<DataFrame>& >::type dataframeVector(dataframeVectorSEXP);
+    removeDifferentDataframes(indexOfDataframesToRemove, dataframeVector);
+    return R_NilValue;
+END_RCPP
+}
 // keepDataframesWithSameHeaders
 std::vector<DataFrame> keepDataframesWithSameHeaders(std::vector<DataFrame>& dataframeVector, bool checkHeaderNames);
 RcppExport SEXP _RcsvgPP_keepDataframesWithSameHeaders(SEXP dataframeVectorSEXP, SEXP checkHeaderNamesSEXP) {
@@ -74,6 +97,8 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_RcsvgPP_sameHeaders", (DL_FUNC) &_RcsvgPP_sameHeaders, 2},
     {"_RcsvgPP_dataFrameHeadersCheck", (DL_FUNC) &_RcsvgPP_dataFrameHeadersCheck, 3},
+    {"_RcsvgPP_indexOfDiffDataframeInVector", (DL_FUNC) &_RcsvgPP_indexOfDiffDataframeInVector, 3},
+    {"_RcsvgPP_removeDifferentDataframes", (DL_FUNC) &_RcsvgPP_removeDifferentDataframes, 2},
     {"_RcsvgPP_keepDataframesWithSameHeaders", (DL_FUNC) &_RcsvgPP_keepDataframesWithSameHeaders, 2},
     {"_RcsvgPP_moveToIndexOne", (DL_FUNC) &_RcsvgPP_moveToIndexOne, 2},
     {"_RcsvgPP_setDataframeColNamesToFirstDataframe", (DL_FUNC) &_RcsvgPP_setDataframeColNamesToFirstDataframe, 1},
