@@ -6,9 +6,9 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/John-Piper/RcsvgPP/workflows/R-CMD-check/badge.svg)](https://github.com/John-Piper/RcsvgPP/actions)
-[![codecov](https://codecov.io/gh/John-Piper/RcsvgPP/branch/main/graph/badge.svg?token=ZLHV0ZY2X2)](https://codecov.io/gh/John-Piper/RcsvgPP)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/RcsvgPP)](https://CRAN.R-project.org/package=RcsvgPP)
+[![codecov](https://codecov.io/gh/John-Piper/RcsvgPP/branch/main/graph/badge.svg)](https://codecov.io/gh/John-Piper/RcsvgPP?branch=main)
 <!-- badges: end -->
 
 The goal of RcsvgPP (R CSV Glue) is to make the job easier to glue
