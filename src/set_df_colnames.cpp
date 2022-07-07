@@ -21,6 +21,8 @@ std::vector<DataFrame> setDataframeColNamesToFirstDataframe(std::vector<DataFram
 
     if (dataframeVector[0].ncol() != dataframeVector[i].ncol()) {
 
+      dataframeVector.clear();
+
       stop("`dataframeVecotr[0]` should have the same number of columns as `dataframeVecotr[i]`");
 
     }
