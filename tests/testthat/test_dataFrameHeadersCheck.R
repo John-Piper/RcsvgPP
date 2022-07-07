@@ -1,6 +1,11 @@
 library("RcsvgPP")
 
 
+#------------------------------------------------------------------------------------------------------------------------------------------#
+
+
+# Set up
+
 column_values_one <- c(1,2,3,4)
 column_values_two <- c(4,3,2,1)
 column_values_three <- c(5,6,7,8)
@@ -21,6 +26,9 @@ test_right_df_two <- data.frame(first_column = column_values_one,
                                 third_column = column_values_three,
                                 fourth_column = column_values_four)
 
+#------------------------------------------------------------------------------------------------------------------------------------------#
+
+# Tests
 
 test_that("Returns True when two dataframes passed in the function have the same header names", {
 
