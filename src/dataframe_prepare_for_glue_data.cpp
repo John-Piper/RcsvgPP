@@ -76,12 +76,7 @@ bool dataFrameHeadersCheck(const DataFrame &leftDataFrame, const DataFrame &righ
 }
 
 
-//' adds the index number of the data frames from a vector to remove in a int vector.
-//'
-//' @param indexOfDataframesToRemove an empty int vector passed by reference for index numbers to be added if required.
-//' @param dataframeVector vector of data frames.
-//' @param checkHeaderNames bool true if header names required checking for the helper function dataFrameHeadersCheck.
-//' @return void.
+
 void indexOfDiffDataframeInVector(std::vector<int> &indexOfDataframesToRemove, std::vector<DataFrame> &dataframeVector, bool const &checkHeaderNames) {
 
   std::vector<DataFrame>::iterator it;
@@ -103,12 +98,7 @@ void indexOfDiffDataframeInVector(std::vector<int> &indexOfDataframesToRemove, s
 }
 
 
-//' removes data frames from a vector using the index positions from a vector of ints.
-//' Helper function for keepDataframesWithSameHeaders.
-//'
-//' @param indexOfDataframesToRemove an int vector passed by reference with the position of the data frames in a vector to be removed.
-//' @param dataframeVector vector of data frames.
-//' @return void.
+
 void removeDifferentDataframes(std::vector<int> &indexOfDataframesToRemove, std::vector<DataFrame> &dataframeVector) {
 
   if (indexOfDataframesToRemove.size() == 0) {

@@ -1,6 +1,12 @@
 library("RcsvgPP")
 
 
+#--------------------------------------------------------
+
+
+# setup
+
+
 column_values_one <- c(1,2,3,4)
 column_values_two <- c(4,3,2,1)
 column_values_three <- c(5,6,7,8)
