@@ -1,15 +1,12 @@
 ## R CMD check results
+
 There were no ERRORs, WARNINGs and NOTES.
 
-Checked on Windows and Mac OS X.
+Checked on macOS-latest (release), windows-latest (release), ubuntu-latest (devel), ubuntu-latest (release) and ubuntu-latest (oldrel-1).
 
-## Changes
+Currently failling on macOS-latest (release)
 
-* Bug fix in the function check_choice.  The exact number will return True in the function check_choice.  In the previous version the function returned True when the correct number was submitted with a character on the left, right or either side of the number. 
+error message: **_ caught segfault _**
+address 0x1e100000d, cause 'memory not mapped'
 
-* Added the argument call. = FALSE in the stop functions when used in the helper functions "check_choice" and "print_menu".
-
-* Added @noRd in the auxiliary function check_choice documentation.
-
-* Added @noRd in the auxiliary function print_menu documentation.
-
+Frist submission of the package.

@@ -1,6 +1,6 @@
 Package: RcsvgPP
 Type: Package
-Title: Easy way To Glue Multipal CSV Files With Common Headers Into A Single File At Rapid Speed  
+Title: An Easy way To Quickly Glue Multipal CSV Files Into A Single Data Frame
 Version: 0.1.0
 Authors@R: 
     person("John", "Piper", email =  "john.piper.using.r@gmail.com", role = c("aut", "cre"))
