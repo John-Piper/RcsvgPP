@@ -7,17 +7,6 @@
 #' @return data.frame
 #'
 #' @noRd
-#'
-#' @examples
-#'
-#' \dontrun{
-#'
-#' df_list <- List(df_1, df_2, df_3)
-#'
-#'
-#' merged_df <- merge_all_dfs(df_list)
-#'
-#' }
 merge_all_dfs <- function(df_list) {
 
   final_df <- do.call(rbind.data.frame, df_list)

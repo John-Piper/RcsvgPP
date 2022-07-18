@@ -34,16 +34,16 @@ Collects files from folder and joins the data into one data frame
 }
 \examples{
 
-\dontrun{
+\donttest{
 
-df <- glue_from_folder("example_path/")
+# df <- glue_from_folder("example_path/")
 
-df <- glue_from_folder(folder_path = "example_path/",
-                       pattern = "*example.csv",
-                       check_header_names = FALSE,
-                       first_file = "first_file.csv",
-                       func=read.csv,
-                       stringsAsFactors=FALSEglue
-                      )
+# df <- glue_from_folder(folder_path = "example_path/",
+#                      pattern = "*example.csv",
+#                        check_header_names = FALSE,
+#                        first_file = "first_file.csv",
+#                        func=read.csv,
+#                        stringsAsFactors=FALSEglue
+#                       )
 }
 }

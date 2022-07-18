@@ -6,4 +6,4 @@
 ^\.github$
 ^cran-comments.md
 ^codecov\.yml$
-.travis.yml
+

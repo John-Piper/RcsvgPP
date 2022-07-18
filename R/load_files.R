@@ -12,6 +12,8 @@
 #' @noRd
 load_files <- function(file_names, reset_wd, func, ...) {
 
+  on.exit(setwd(reset_wd))
+
   files <- lapply(file_names, function(file_name) {
 
       tryCatch(

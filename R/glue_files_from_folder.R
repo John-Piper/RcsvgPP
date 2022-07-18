@@ -12,18 +12,19 @@
 #'
 #' @examples
 #'
-#' \dontrun{
+#' \donttest{
 #'
-#' df <- glue_from_folder("example_path/")
+#' # df <- glue_from_folder("example_path/")
 #'
-#' df <- glue_from_folder(folder_path = "example_path/",
-#'                        pattern = "*example.csv",
-#'                        check_header_names = FALSE,
-#'                        first_file = "first_file.csv",
-#'                        func=read.csv,
-#'                        stringsAsFactors=FALSEglue
-#'                       )
+#' # df <- glue_from_folder(folder_path = "example_path/",
+#' #                      pattern = "*example.csv",
+#' #                        check_header_names = FALSE,
+#' #                        first_file = "first_file.csv",
+#' #                        func=read.csv,
+#' #                        stringsAsFactors=FALSEglue
+#' #                       )
 #' }
+#' @export
 glue_from_folder <- function(folder_path = "",
                              pattern = "*.csv",
                              check_header_names = TRUE,
@@ -32,6 +33,8 @@ glue_from_folder <- function(folder_path = "",
                              ...) {
 
   current_wd <- getwd()
+
+  on.exit(setwd(current_wd))
 
   setwd(folder_path)
 

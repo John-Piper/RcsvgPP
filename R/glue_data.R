@@ -5,19 +5,24 @@
 #'
 #' @return data.frame
 #'
-#' @export
-#'
 #' @examples
 #'
-#' \dontrun{
+#' \donttest{
 #'
-#' df_list <- List(df_1, df_2, df_3)
+#' df_1 <- data.frame(a = c(1,2,3,4))
+#' df_2 <- data.frame(a = c(5,6,7,8))
+#' df_3 <- data.frame(b = c(9,10,11,12))
+#'
+#' df_list <- list(df_1, df_2, df_3)
 #'
 #' final_df_one <- glue_data(df_list)
+#' # data.frame(a = c(1,2,3,4,5,6,7,8))
 #'
 #' final_df_two <- glue_data(df_list, check_header_names = FALSE)
+#' # data.frame(a = c(1,2,3,4,5,6,7,8,9,10,11,12))
 #'
 #' }
+#' @export
 glue_data <- function(input_data, check_header_names = TRUE) {
 
   stopifnot(length(input_data) > 0, is.data.frame(input_data[[1]]))
